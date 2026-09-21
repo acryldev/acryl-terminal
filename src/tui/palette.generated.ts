@@ -14,10 +14,10 @@ const dark = {
 
 const light = {
   primary: '#3652D9',
-  secondary: '#0284C7',
+  secondary: '#0369A1',
   accent: '#4F46E5',
   reasoning: '#7E22CE',
-  success: '#059669',
+  success: '#047857',
   warning: '#B45309',
   error: '#DC2626',
   info: '#3652D9',
