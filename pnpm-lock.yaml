@@ -198,8 +198,8 @@ importers:
         specifier: ^1.7.21
         version: 1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0)
       '@acryldev/coding-capabilities':
-        specifier: workspace:*
-        version: link:../../packages/coding-capabilities
+        specifier: 0.1.0
+        version: 0.1.0(e41c7e508c95d9bdcb4ac610b0493a20)
       '@acryldev/control':
         specifier: 0.3.0
         version: 0.3.0(@deepseek-ai/cordis@4.0.4)
@@ -577,8 +577,8 @@ importers:
         specifier: 0.2.1
         version: 0.2.1(@deepseek-ai/cordis@4.0.4)
       '@acryldev/coding-capabilities':
-        specifier: workspace:*
-        version: link:../../packages/coding-capabilities
+        specifier: 0.1.0
+        version: 0.1.0(e41c7e508c95d9bdcb4ac610b0493a20)
       '@acryldev/command-reply':
         specifier: 0.1.0
         version: 0.1.0(b82f6defe67c6c331801293809c171b2)
@@ -1145,85 +1145,6 @@ importers:
         specifier: 4.1.11
         version: 4.1.11(@opentelemetry/api@1.9.1)(@types/node@22.20.5)(vite@8.3.8(@types/node@22.20.5)(yaml@2.9.1))
 
-  packages/coding-capabilities:
-    dependencies:
-      '@acryldev/agent-control':
-        specifier: 0.1.0
-        version: 0.1.0(f68ff9fdf1308d44b813104b60ff10cb)
-      '@acryldev/app-save':
-        specifier: 0.1.0
-        version: 0.1.0
-      '@acryldev/app-shell':
-        specifier: 0.2.1
-        version: 0.2.1(969b73b93093a51711db09c35ff590e9)
-      '@acryldev/brand':
-        specifier: 0.1.0
-        version: 0.1.0
-      '@acryldev/brand-client':
-        specifier: 0.2.1
-        version: 0.2.1(@deepseek-ai/cordis@4.0.4)
-      '@acryldev/command-reply':
-        specifier: 0.1.0
-        version: 0.1.0(b82f6defe67c6c331801293809c171b2)
-      '@acryldev/cordis-plugin-market':
-        specifier: 0.1.0
-        version: 0.1.0(acedd740010b15833cacb76ce46a08fb)
-      '@acryldev/launcher-desktop':
-        specifier: 0.1.9
-        version: 0.1.9(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/dsh-client-ui-slots@0.2.0-rc.2(@deepseek-ai/cordis@4.0.4))(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0)
-      '@acryldev/mount-anchors':
-        specifier: 0.1.0
-        version: 0.1.0(969b73b93093a51711db09c35ff590e9)
-      '@acryldev/plugin-admin':
-        specifier: 0.2.1
-        version: 0.2.1(c5fcce38e0f476da79199f74f2c65890)
-      '@acryldev/plugin-context':
-        specifier: 0.1.1
-        version: 0.1.1(766109367292486c8d284d3fbf29510b)
-      '@acryldev/plugin-hub':
-        specifier: 0.1.0
-        version: 0.1.0(977ef028665d93fc09d630987d1d9ed2)
-      '@acryldev/settings':
-        specifier: 0.2.1
-        version: 0.2.1(@deepseek-ai/cordis@4.0.4)
-      '@acryldev/shortcuts':
-        specifier: 0.1.0
-        version: 0.1.0(969b73b93093a51711db09c35ff590e9)
-      '@acryldev/sign-in':
-        specifier: 0.2.2
-        version: 0.2.2(c5fcce38e0f476da79199f74f2c65890)
-      '@acryldev/support':
-        specifier: 0.2.1
-        version: 0.2.1(c5fcce38e0f476da79199f74f2c65890)
-      '@acryldev/system-prompt':
-        specifier: 0.3.0
-        version: 0.3.0(@deepseek-ai/cordis@4.0.4)
-      '@acryldev/ui':
-        specifier: 0.4.0
-        version: 0.4.0(b82f6defe67c6c331801293809c171b2)
-      '@acryldev/ui-tui':
-        specifier: 0.1.0
-        version: 0.1.0(@earendil-works/pi-tui@1.1.0(patch_hash=cafd73997964c16b4eb13f7220af2c9046a6de820cf652bbd1f181ca494fb1ee))
-      '@acryldev/workspace':
-        specifier: 0.2.3
-        version: 0.2.3(47b57643fc6910807f82d5f75b030fc1)
-      '@deepseek-ai/cordis-plugin-include':
-        specifier: 1.0.9
-        version: 1.0.9(@deepseek-ai/cordis-plugin-loader@1.0.5)(@deepseek-ai/cordis@4.0.4)
-    devDependencies:
-      '@types/node':
-        specifier: ^22.20.0
-        version: 22.20.5
-      tsdown:
-        specifier: 0.22.2
-        version: 0.22.2(typescript@6.0.3)
-      typescript:
-        specifier: 6.0.3
-        version: 6.0.3
-      vitest:
-        specifier: 4.1.11
-        version: 4.1.11(@opentelemetry/api@1.9.1)(@types/node@22.20.5)(vite@8.3.8(@types/node@22.20.5)(yaml@2.9.1))
-
 packages:
 
   '@acryldev/agent-control@0.1.0':
@@ -1297,6 +1218,10 @@ packages:
     resolution: {integrity: sha512-NMkhchVAccyh3tlvzvpy7RllBlYkm0Ne4fV5OThc2NtX0kUR1wPCLrpWAr5srEt8eJVCGjHKYSVUtNTTnfTpKA==}
     engines: {node: ^22.19.0 || >=24.0.0}
 
+  '@acryldev/coding-capabilities@0.1.0':
+    resolution: {integrity: sha512-Tu8dDy08OFLg+lqsmYpGKJrFkMCea493lh+FPk0UJQVw1GAxdCwYtFi7rzbgzBcH7fEH5Xi7w923l3ZltzZ+7A==}
+    engines: {node: ^22.19.0 || >=24.0.0}
+
   '@acryldev/command-reply@0.1.0':
     resolution: {integrity: sha512-eRQKmBNaSNrPTYX4SK7RwcE37isi/cpDTAdGgktvTyG0g36lDp+ITMm8aluHJYq/5uz4PpKHS8iqalwwAg84mg==}
     engines: {node: ^22.19.0 || >=24.0.0}
@@ -1305,6 +1230,12 @@ packages:
 
   '@acryldev/control@0.3.0':
     resolution: {integrity: sha512-mnDxfzWIGIyEEGIOw3xTzpsd7NgUJMkD7MvWw4XxQ/s4g/fhPIs69R6550gpTFcBV0RGqQoe8Nf4WWC9MEex+Q==}
+    engines: {node: ^22.19.0 || >=24.0.0}
+    peerDependencies:
+      '@deepseek-ai/cordis': ^4.0.4
+
+  '@acryldev/control@0.3.1':
+    resolution: {integrity: sha512-NdlBDWXYUgKgVFDfN69YHK8A92F0Wx7kSomh7DX+ZxOhxRDkwYTi7p0LFRzlW6Gn+xkR5wuBIQvDCR03RFyhbw==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@deepseek-ai/cordis': ^4.0.4
@@ -1439,6 +1370,15 @@ packages:
       '@deepseek-ai/dsh-client-ui-slots': 0.2.0-rc.2
       react: 18.3.1
 
+  '@acryldev/plugin-admin@0.2.2':
+    resolution: {integrity: sha512-ZQf1ILHWJ4OHLfkXLOfQQ5K18zpi/d4sGlb7kpRfgVxoWr/lvX96DXX6llYko5HgRDf00Yam75NBhjI+Ri9oog==}
+    engines: {node: ^22.19.0 || >=24.0.0}
+    peerDependencies:
+      '@acryldev/blends': ^1.0.0
+      '@deepseek-ai/cordis': ^4.0.2
+      '@deepseek-ai/dsh-client-ui-slots': 0.2.0-rc.2
+      react: 18.3.1
+
   '@acryldev/plugin-context@0.1.1':
     resolution: {integrity: sha512-DVUSQQNXokkOBj07yGEG9TP1txSgTXoZLxKHAGOwJUlfrilthPwDSwkWCwfw7lh4/rEYAAEUWsxJlO+TEWibyQ==}
     engines: {node: ^22.19.0 || >=24.0.0}
@@ -1479,8 +1419,26 @@ packages:
       '@deepseek-ai/dsh-client-ui-slots': 0.2.0-rc.2
       react: 18.3.1
 
+  '@acryldev/sign-in@0.2.3':
+    resolution: {integrity: sha512-tROl+YbvVgEuGKIjR2pbB+4WBjo5c20dPY4xawkjvlV+EOQxDQ3+cDCrCSw0k/p2dogesNXZNg7Q4fY5VncGHg==}
+    engines: {node: ^22.19.0 || >=24.0.0}
+    peerDependencies:
+      '@acryldev/blends': ^1.0.0
+      '@deepseek-ai/cordis': ^4.0.2
+      '@deepseek-ai/dsh-client-ui-slots': 0.2.0-rc.2
+      react: 18.3.1
+
   '@acryldev/support@0.2.1':
     resolution: {integrity: sha512-XU6r1uv+XLuSydCVurlhHoImqv2CQMNclHDzM10QT/Ll2mJylU5UJLgLvQHaajgCE5k20//fYcjGpwuj0lkSSQ==}
+    engines: {node: ^22.19.0 || >=24.0.0}
+    peerDependencies:
+      '@acryldev/blends': ^1.0.0
+      '@deepseek-ai/cordis': ^4.0.2
+      '@deepseek-ai/dsh-client-ui-slots': 0.2.0-rc.2
+      react: 18.3.1
+
+  '@acryldev/support@0.2.2':
+    resolution: {integrity: sha512-3BeeeBTYrRIgUCuA3T2fHrORNX9lAq1CbifGMUqlpXrAEkF+0SOPKwggTCgCh9ZeiC8npikympo2zh49VKo/Og==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@acryldev/blends': ^1.0.0
@@ -1529,6 +1487,21 @@ packages:
 
   '@acryldev/workspace@0.2.3':
     resolution: {integrity: sha512-5E6M4QbOgD8pNn01BE1tmHlrojrsf5Sm2alkQeUaNHfMVIJsSJSNbpj5nFm3eeWT/ZnBh/qHruxtQ/luKqKcbw==}
+    engines: {node: ^22.19.0 || >=24.0.0}
+    peerDependencies:
+      '@acryldev/blends': ^1.0.0
+      '@deepseek-ai/cordis': ^4.0.2
+      '@deepseek-ai/dsh-api-session-controller': 0.2.0-rc.2
+      '@deepseek-ai/dsh-api-workspace-controller': 0.2.0-rc.2
+      '@deepseek-ai/dsh-client-store': 0.2.0-rc.2
+      '@deepseek-ai/dsh-client-ui-renderer': 0.2.0-rc.2
+      '@deepseek-ai/dsh-client-ui-session': 0.2.0-rc.2
+      '@deepseek-ai/dsh-client-ui-slots': 0.2.0-rc.2
+      '@deepseek-ai/dsh-session': 0.2.0-rc.2
+      react: 18.3.1
+
+  '@acryldev/workspace@0.2.4':
+    resolution: {integrity: sha512-fUUHNOo5W7GcCtOIKA035KgGoik/JliFjvuWNvKi4or3lHmf8ejWVE3hxc8Jf++npiYOLfM29E480X1GNjsDNA==}
     engines: {node: ^22.19.0 || >=24.0.0}
     peerDependencies:
       '@acryldev/blends': ^1.0.0
@@ -6325,6 +6298,91 @@ snapshots:
     dependencies:
       '@deepseek-ai/schemastery': 3.18.5
 
+  '@acryldev/coding-capabilities@0.1.0(e41c7e508c95d9bdcb4ac610b0493a20)':
+    dependencies:
+      '@acryldev/agent-control': 0.1.0(f68ff9fdf1308d44b813104b60ff10cb)
+      '@acryldev/app-save': 0.1.0
+      '@acryldev/app-shell': 0.2.1(969b73b93093a51711db09c35ff590e9)
+      '@acryldev/brand': 0.1.0
+      '@acryldev/brand-client': 0.2.1(@deepseek-ai/cordis@4.0.4)
+      '@acryldev/command-reply': 0.1.0(b82f6defe67c6c331801293809c171b2)
+      '@acryldev/cordis-plugin-market': 0.1.0(acedd740010b15833cacb76ce46a08fb)
+      '@acryldev/launcher-desktop': 0.1.9(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/dsh-client-ui-slots@0.2.0-rc.2(@deepseek-ai/cordis@4.0.4))(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0)
+      '@acryldev/mount-anchors': 0.1.0(969b73b93093a51711db09c35ff590e9)
+      '@acryldev/plugin-admin': 0.2.2(c5fcce38e0f476da79199f74f2c65890)
+      '@acryldev/plugin-context': 0.1.1(766109367292486c8d284d3fbf29510b)
+      '@acryldev/plugin-hub': 0.1.0(977ef028665d93fc09d630987d1d9ed2)
+      '@acryldev/settings': 0.2.1(@deepseek-ai/cordis@4.0.4)
+      '@acryldev/shortcuts': 0.1.0(969b73b93093a51711db09c35ff590e9)
+      '@acryldev/sign-in': 0.2.3(c5fcce38e0f476da79199f74f2c65890)
+      '@acryldev/support': 0.2.2(c5fcce38e0f476da79199f74f2c65890)
+      '@acryldev/system-prompt': 0.3.0(@deepseek-ai/cordis@4.0.4)
+      '@acryldev/ui': 0.4.0(b82f6defe67c6c331801293809c171b2)
+      '@acryldev/ui-tui': 0.1.0(@earendil-works/pi-tui@1.1.0(patch_hash=cafd73997964c16b4eb13f7220af2c9046a6de820cf652bbd1f181ca494fb1ee))
+      '@acryldev/workspace': 0.2.4(47b57643fc6910807f82d5f75b030fc1)
+      '@deepseek-ai/cordis-plugin-include': 1.0.9(@deepseek-ai/cordis-plugin-loader@1.0.5)(@deepseek-ai/cordis@4.0.4)
+    transitivePeerDependencies:
+      - '@acryldev/blends'
+      - '@deepseek-ai/cordis'
+      - '@deepseek-ai/cordis-plugin-group'
+      - '@deepseek-ai/cordis-plugin-loader'
+      - '@deepseek-ai/dsh-agent'
+      - '@deepseek-ai/dsh-agent-preset-registry'
+      - '@deepseek-ai/dsh-agent-presets'
+      - '@deepseek-ai/dsh-api-gateway'
+      - '@deepseek-ai/dsh-api-remotes'
+      - '@deepseek-ai/dsh-api-session-controller'
+      - '@deepseek-ai/dsh-api-workspace-controller'
+      - '@deepseek-ai/dsh-brand'
+      - '@deepseek-ai/dsh-client-connection'
+      - '@deepseek-ai/dsh-client-locale'
+      - '@deepseek-ai/dsh-client-shortcuts'
+      - '@deepseek-ai/dsh-client-store'
+      - '@deepseek-ai/dsh-client-ui-commands'
+      - '@deepseek-ai/dsh-client-ui-conversation'
+      - '@deepseek-ai/dsh-client-ui-layout'
+      - '@deepseek-ai/dsh-client-ui-primitives'
+      - '@deepseek-ai/dsh-client-ui-renderer'
+      - '@deepseek-ai/dsh-client-ui-session'
+      - '@deepseek-ai/dsh-client-ui-settings'
+      - '@deepseek-ai/dsh-client-ui-settings-models'
+      - '@deepseek-ai/dsh-client-ui-sidebar'
+      - '@deepseek-ai/dsh-client-ui-sidebar-right'
+      - '@deepseek-ai/dsh-client-ui-slots'
+      - '@deepseek-ai/dsh-client-ui-theme'
+      - '@deepseek-ai/dsh-client-ui-workspace'
+      - '@deepseek-ai/dsh-commands'
+      - '@deepseek-ai/dsh-cordis-host-runner'
+      - '@deepseek-ai/dsh-credentials'
+      - '@deepseek-ai/dsh-goal'
+      - '@deepseek-ai/dsh-hmr'
+      - '@deepseek-ai/dsh-home-paths'
+      - '@deepseek-ai/dsh-host-plugin-inventory'
+      - '@deepseek-ai/dsh-invariants'
+      - '@deepseek-ai/dsh-launch-environment'
+      - '@deepseek-ai/dsh-llm'
+      - '@deepseek-ai/dsh-message-feedback'
+      - '@deepseek-ai/dsh-ptc-runtime'
+      - '@deepseek-ai/dsh-sandbox'
+      - '@deepseek-ai/dsh-sandbox-policy'
+      - '@deepseek-ai/dsh-scope'
+      - '@deepseek-ai/dsh-session'
+      - '@deepseek-ai/dsh-session-persistence'
+      - '@deepseek-ai/dsh-settings'
+      - '@deepseek-ai/dsh-subprocess'
+      - '@deepseek-ai/dsh-system-prompt'
+      - '@deepseek-ai/dsh-typert-protocol'
+      - '@deepseek-ai/dsh-typert-registry'
+      - '@deepseek-ai/dsh-user-approval'
+      - '@deepseek-ai/schemastery'
+      - '@earendil-works/pi-tui'
+      - '@types/node'
+      - bufferutil
+      - react
+      - react-dom
+      - utf-8-validate
+      - ws
+
   '@acryldev/command-reply@0.1.0(b82f6defe67c6c331801293809c171b2)':
     dependencies:
       '@acryldev/ui': 0.4.0(b82f6defe67c6c331801293809c171b2)
@@ -6347,6 +6405,10 @@ snapshots:
       - '@deepseek-ai/dsh-client-ui-theme'
 
   '@acryldev/control@0.3.0(@deepseek-ai/cordis@4.0.4)':
+    dependencies:
+      '@deepseek-ai/cordis': 4.0.4(@deepseek-ai/cordis-plugin-include@1.0.9)(@deepseek-ai/cordis-plugin-loader@1.0.5)
+
+  '@acryldev/control@0.3.1(@deepseek-ai/cordis@4.0.4)':
     dependencies:
       '@deepseek-ai/cordis': 4.0.4(@deepseek-ai/cordis-plugin-include@1.0.9)(@deepseek-ai/cordis-plugin-loader@1.0.5)
 
@@ -6672,6 +6734,31 @@ snapshots:
       - '@deepseek-ai/dsh-client-ui-sidebar-right'
       - '@deepseek-ai/dsh-client-ui-theme'
 
+  '@acryldev/plugin-admin@0.2.2(c5fcce38e0f476da79199f74f2c65890)':
+    dependencies:
+      '@acryldev/blends': 1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0)
+      '@acryldev/control': 0.3.1(@deepseek-ai/cordis@4.0.4)
+      '@acryldev/loopback-http': 0.2.1(@acryldev/blends@1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0))
+      '@acryldev/ui': 0.4.0(b82f6defe67c6c331801293809c171b2)
+      '@deepseek-ai/cordis': 4.0.4(@deepseek-ai/cordis-plugin-include@1.0.9)(@deepseek-ai/cordis-plugin-loader@1.0.5)
+      '@deepseek-ai/dsh-client-ui-slots': 0.2.0-rc.2(@deepseek-ai/cordis@4.0.4)
+      react: 18.3.1
+    transitivePeerDependencies:
+      - '@deepseek-ai/dsh-api-session-controller'
+      - '@deepseek-ai/dsh-api-workspace-controller'
+      - '@deepseek-ai/dsh-client-locale'
+      - '@deepseek-ai/dsh-client-shortcuts'
+      - '@deepseek-ai/dsh-client-ui-commands'
+      - '@deepseek-ai/dsh-client-ui-conversation'
+      - '@deepseek-ai/dsh-client-ui-layout'
+      - '@deepseek-ai/dsh-client-ui-renderer'
+      - '@deepseek-ai/dsh-client-ui-session'
+      - '@deepseek-ai/dsh-client-ui-settings'
+      - '@deepseek-ai/dsh-client-ui-settings-models'
+      - '@deepseek-ai/dsh-client-ui-sidebar'
+      - '@deepseek-ai/dsh-client-ui-sidebar-right'
+      - '@deepseek-ai/dsh-client-ui-theme'
+
   '@acryldev/plugin-context@0.1.1(766109367292486c8d284d3fbf29510b)':
     dependencies:
       '@acryldev/blends': 1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0)
@@ -6785,12 +6872,64 @@ snapshots:
       - '@deepseek-ai/dsh-client-ui-sidebar-right'
       - '@deepseek-ai/dsh-client-ui-theme'
 
+  '@acryldev/sign-in@0.2.3(c5fcce38e0f476da79199f74f2c65890)':
+    dependencies:
+      '@acryldev/blends': 1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0)
+      '@acryldev/control': 0.3.1(@deepseek-ai/cordis@4.0.4)
+      '@acryldev/loopback-http': 0.2.1(@acryldev/blends@1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0))
+      '@acryldev/ui': 0.4.0(b82f6defe67c6c331801293809c171b2)
+      '@deepseek-ai/cordis': 4.0.4(@deepseek-ai/cordis-plugin-include@1.0.9)(@deepseek-ai/cordis-plugin-loader@1.0.5)
+      '@deepseek-ai/dsh-client-ui-slots': 0.2.0-rc.2(@deepseek-ai/cordis@4.0.4)
+      react: 18.3.1
+    transitivePeerDependencies:
+      - '@deepseek-ai/dsh-api-session-controller'
+      - '@deepseek-ai/dsh-api-workspace-controller'
+      - '@deepseek-ai/dsh-client-locale'
+      - '@deepseek-ai/dsh-client-shortcuts'
+      - '@deepseek-ai/dsh-client-ui-commands'
+      - '@deepseek-ai/dsh-client-ui-conversation'
+      - '@deepseek-ai/dsh-client-ui-layout'
+      - '@deepseek-ai/dsh-client-ui-renderer'
+      - '@deepseek-ai/dsh-client-ui-session'
+      - '@deepseek-ai/dsh-client-ui-settings'
+      - '@deepseek-ai/dsh-client-ui-settings-models'
+      - '@deepseek-ai/dsh-client-ui-sidebar'
+      - '@deepseek-ai/dsh-client-ui-sidebar-right'
+      - '@deepseek-ai/dsh-client-ui-theme'
+
   '@acryldev/support@0.2.1(c5fcce38e0f476da79199f74f2c65890)':
     dependencies:
       '@acryldev/blends': 1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0)
       '@acryldev/control': 0.3.0(@deepseek-ai/cordis@4.0.4)
       '@acryldev/diagnostics': 0.2.0(@deepseek-ai/cordis@4.0.4)
       '@acryldev/loopback-http': 0.2.0(@acryldev/blends@1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0))
+      '@acryldev/ui': 0.4.0(b82f6defe67c6c331801293809c171b2)
+      '@deepseek-ai/cordis': 4.0.4(@deepseek-ai/cordis-plugin-include@1.0.9)(@deepseek-ai/cordis-plugin-loader@1.0.5)
+      '@deepseek-ai/dsh-client-ui-slots': 0.2.0-rc.2(@deepseek-ai/cordis@4.0.4)
+      '@deepseek-ai/dsh-home-paths': 0.2.0-rc.2(@deepseek-ai/cordis@4.0.4)
+      react: 18.3.1
+    transitivePeerDependencies:
+      - '@deepseek-ai/dsh-api-session-controller'
+      - '@deepseek-ai/dsh-api-workspace-controller'
+      - '@deepseek-ai/dsh-client-locale'
+      - '@deepseek-ai/dsh-client-shortcuts'
+      - '@deepseek-ai/dsh-client-ui-commands'
+      - '@deepseek-ai/dsh-client-ui-conversation'
+      - '@deepseek-ai/dsh-client-ui-layout'
+      - '@deepseek-ai/dsh-client-ui-renderer'
+      - '@deepseek-ai/dsh-client-ui-session'
+      - '@deepseek-ai/dsh-client-ui-settings'
+      - '@deepseek-ai/dsh-client-ui-settings-models'
+      - '@deepseek-ai/dsh-client-ui-sidebar'
+      - '@deepseek-ai/dsh-client-ui-sidebar-right'
+      - '@deepseek-ai/dsh-client-ui-theme'
+
+  '@acryldev/support@0.2.2(c5fcce38e0f476da79199f74f2c65890)':
+    dependencies:
+      '@acryldev/blends': 1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0)
+      '@acryldev/control': 0.3.1(@deepseek-ai/cordis@4.0.4)
+      '@acryldev/diagnostics': 0.2.0(@deepseek-ai/cordis@4.0.4)
+      '@acryldev/loopback-http': 0.2.1(@acryldev/blends@1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0))
       '@acryldev/ui': 0.4.0(b82f6defe67c6c331801293809c171b2)
       '@deepseek-ai/cordis': 4.0.4(@deepseek-ai/cordis-plugin-include@1.0.9)(@deepseek-ai/cordis-plugin-loader@1.0.5)
       '@deepseek-ai/dsh-client-ui-slots': 0.2.0-rc.2(@deepseek-ai/cordis@4.0.4)
@@ -6850,6 +6989,50 @@ snapshots:
     dependencies:
       '@acryldev/blends': 1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0)
       '@acryldev/control': 0.3.0(@deepseek-ai/cordis@4.0.4)
+      '@acryldev/loopback-http': 0.2.1(@acryldev/blends@1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0))
+      '@acryldev/settings': 0.2.1(@deepseek-ai/cordis@4.0.4)
+      '@acryldev/ui': 0.4.0(b82f6defe67c6c331801293809c171b2)
+      '@codemirror/language': 6.12.4
+      '@codemirror/language-data': 6.5.2
+      '@codemirror/state': 6.7.6
+      '@codemirror/theme-one-dark': 6.1.3
+      '@codemirror/view': 6.43.13
+      '@deepseek-ai/cordis': 4.0.4(@deepseek-ai/cordis-plugin-include@1.0.9)(@deepseek-ai/cordis-plugin-loader@1.0.5)
+      '@deepseek-ai/dsh-api-session-controller': 0.2.0-rc.2(dace5560a438aadd4b67df8c4963850b)
+      '@deepseek-ai/dsh-api-workspace-controller': 0.2.0-rc.2(7b1cc3b3e03980f49f8901a2ede23841)
+      '@deepseek-ai/dsh-client-store': 0.2.0-rc.2(@deepseek-ai/cordis@4.0.4)(@types/react@18.3.31)(react@18.3.1)
+      '@deepseek-ai/dsh-client-ui-renderer': 0.2.0-rc.2(@deepseek-ai/cordis@4.0.4)
+      '@deepseek-ai/dsh-client-ui-session': 0.2.0-rc.2(@deepseek-ai/cordis@4.0.4)
+      '@deepseek-ai/dsh-client-ui-slots': 0.2.0-rc.2(@deepseek-ai/cordis@4.0.4)
+      '@deepseek-ai/dsh-session': 0.2.0-rc.2(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/dsh-scope@0.2.0-rc.2(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/dsh-invariants@0.2.0-rc.2(@deepseek-ai/cordis@4.0.4)))
+      '@deepseek-ai/schemastery': 3.18.5
+      '@xterm/addon-fit': 0.10.0(@xterm/xterm@5.5.0)
+      '@xterm/addon-serialize': 0.13.0(@xterm/xterm@5.5.0)
+      '@xterm/addon-webgl': 0.18.0(@xterm/xterm@5.5.0)
+      '@xterm/headless': 5.5.0
+      '@xterm/xterm': 5.5.0
+      codemirror: 6.0.2
+      node-pty: 1.2.0-beta.15(patch_hash=76ba48ec629e2a6ebc193ec734b522f890287419a74efee65d80ee1652de1e0d)
+      react: 18.3.1
+      ws: 8.22.0
+    transitivePeerDependencies:
+      - '@deepseek-ai/dsh-client-locale'
+      - '@deepseek-ai/dsh-client-shortcuts'
+      - '@deepseek-ai/dsh-client-ui-commands'
+      - '@deepseek-ai/dsh-client-ui-conversation'
+      - '@deepseek-ai/dsh-client-ui-layout'
+      - '@deepseek-ai/dsh-client-ui-settings'
+      - '@deepseek-ai/dsh-client-ui-settings-models'
+      - '@deepseek-ai/dsh-client-ui-sidebar'
+      - '@deepseek-ai/dsh-client-ui-sidebar-right'
+      - '@deepseek-ai/dsh-client-ui-theme'
+      - bufferutil
+      - utf-8-validate
+
+  '@acryldev/workspace@0.2.4(47b57643fc6910807f82d5f75b030fc1)':
+    dependencies:
+      '@acryldev/blends': 1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0)
+      '@acryldev/control': 0.3.1(@deepseek-ai/cordis@4.0.4)
       '@acryldev/loopback-http': 0.2.1(@acryldev/blends@1.7.21(@deepseek-ai/cordis@4.0.4)(@deepseek-ai/schemastery@3.18.5)(react@18.3.1)(ws@8.23.0))
       '@acryldev/settings': 0.2.1(@deepseek-ai/cordis@4.0.4)
       '@acryldev/ui': 0.4.0(b82f6defe67c6c331801293809c171b2)

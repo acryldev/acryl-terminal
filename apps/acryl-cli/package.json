@@ -150,7 +150,7 @@
     "@acryldev/blends": "^1.7.21",
     "@acryldev/cordis-plugin-market": "0.1.0",
     "diff": "^9.0.0",
-    "@acryldev/coding-capabilities": "workspace:*",
+    "@acryldev/coding-capabilities": "0.1.0",
     "@acryldev/sign-in": "0.2.2"
   },
   "devDependencies": {

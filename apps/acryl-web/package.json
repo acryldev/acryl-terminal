@@ -211,7 +211,7 @@
     "@acryldev/cordis-plugin-market": "0.1.0",
     "diff": "^8.0.4",
     "@acryldev/brand-client": "0.2.1",
-    "@acryldev/coding-capabilities": "workspace:*"
+    "@acryldev/coding-capabilities": "0.1.0"
   },
   "scripts": {
     "build": "tsdown && tsc -p tsconfig.json --emitDeclarationOnly",

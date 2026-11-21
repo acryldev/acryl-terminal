@@ -10,11 +10,10 @@ The ACRYL terminal coding agent (`acryl-cli`) and the earlier ACRYL browser surf
 | --- | --- |
 | `apps/acryl-cli` | The terminal coding agent: a pi-tui client on the DeepSeek Harness, with the ACRYL plugin market, login and model screens, and the `acryl save` and `acryl ui` commands. |
 | `apps/acryl-web` | The earlier browser surface: the ACRYL workspace (files, terminals, agents, chat) served on `127.0.0.1`. |
-| `packages/coding-capabilities` | How the coding capabilities compose on each of the two surfaces (the Loader rows and the packages each must resolve). |
 | `distribution/acryl-web-container` | A Debian image that runs one `acryl-web` workspace per container. |
 | `scripts/` | Release tooling: the portable archive builders, the release receipts and manifest, the npm runtime packer. |
 
-Everything else ACRYL is made of (the control plane, the harness runtime, the plugins, Blends) is a published `@acryldev/*` package on npm, pinned exactly in the two apps' `package.json`. This repository depends on those packages and on nothing in the [acryldev/acryl](https://github.com/acryldev/acryl) checkout.
+Everything else ACRYL is made of (the control plane, the harness runtime, how the coding capabilities compose per surface (`@acryldev/coding-capabilities`), the plugins, Blends) is a published `@acryldev/*` package on npm, pinned exactly in the two apps' `package.json`. This repository depends on those packages and on nothing in the [acryldev/acryl](https://github.com/acryldev/acryl) checkout.
 
 `acryl new`, `acryl share` and the other app-making commands are the `acryl` selector's (`npx acryl@latest new <name>`); the terminal agent prints that line when asked.
 

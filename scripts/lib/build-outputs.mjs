@@ -12,7 +12,7 @@ import { existsSync, readdirSync, readFileSync } from 'node:fs'
 import { join, relative, resolve } from 'node:path'
 
 /** The folders that hold workspace packages (`pnpm-workspace.yaml`). */
-const PACKAGE_GROUPS = ['apps', 'packages', 'runtime', 'plugins']
+const PACKAGE_GROUPS = ['apps', 'runtime', 'plugins']
 
 /** The command that builds every package under the build lock, printed when something is unbuilt. */
 export const BUILD_COMMAND = 'node scripts/with-build-lock.mjs corepack pnpm run build'

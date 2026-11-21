@@ -2,7 +2,6 @@ nodeLinker: isolated
 
 packages:
   - apps/*
-  - packages/*
 
 allowBuilds:
   '@deepseek-ai/dsh-subprocess-local': true
