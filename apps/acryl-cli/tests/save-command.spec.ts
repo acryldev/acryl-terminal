@@ -1,12 +1,11 @@
 /** `acryl save` / `acryl remote connect` through the real CLI entry, against a real git repository and a local bare remote. */
 import { spawnSync } from 'node:child_process'
-import { mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from 'node:fs'
+import { mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join } from 'node:path'
 import { afterEach, describe, expect, it } from 'vitest'
 import { parseAcrylArgs } from '../src/cli/grammar.ts'
 import { runAcryl } from '../src/cli/run.ts'
-import { runNewApp } from '../src/host/new-command.ts'
 
 const dirs: string[] = []
 afterEach(() => { for (const dir of dirs.splice(0)) rmSync(dir, { force: true, recursive: true }) })
@@ -29,7 +28,11 @@ describe('acryl save', () => {
 
   it('a new app is private and proprietary; it saves locally, connects to an existing remote, and pushes; a secret is refused', async () => {
     const root = realpathSync(mkdtempSync(join(tmpdir(), 'acryl-save-'))); dirs.push(root)
-    const app = runNewApp({ dir: join(root, 'books'), title: 'Books' }).root
+    // The shape `npx acryl new` writes: a definition that is private and proprietary, and a plugins folder.
+    const app = join(root, 'books')
+    mkdirSync(join(app, 'plugins'), { recursive: true })
+    writeFileSync(join(app, 'blend.yaml'), 'id: acryl.books\nname: Books\nvisibility: private\nlicense: Proprietary\n')
+    spawnSync('git', ['init', '--quiet'], { cwd: app })
     for (const [key, value] of [['user.name', 't'], ['user.email', 't@t']]) spawnSync('git', ['config', key!, value!], { cwd: app })
     const manifest = readFileSync(join(app, 'blend.yaml'), 'utf8')
     expect(manifest).toContain('visibility: private')

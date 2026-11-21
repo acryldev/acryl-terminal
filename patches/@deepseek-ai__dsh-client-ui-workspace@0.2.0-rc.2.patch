@@ -1,0 +1,12 @@
+diff --git a/lib/client.js b/lib/client.js
+index 41a4591..fd5ced3 100644
+--- a/lib/client.js
++++ b/lib/client.js
+@@ -3108,6 +3108,7 @@ window.__ModuleLoader__.load({
+ 			};
+ 			return (0, react_jsx_runtime.jsxs)("div", {
+ 				className: clsx(WorkspaceBrowser_module_css_default.root, !wide && WorkspaceBrowser_module_css_default.rail),
++				"data-dsh-workspace-drop-target": "",
+ 				children: [
+ 					(0, react_jsx_runtime.jsxs)("div", {
+ 						className: WorkspaceBrowser_module_css_default.sectionHeader,

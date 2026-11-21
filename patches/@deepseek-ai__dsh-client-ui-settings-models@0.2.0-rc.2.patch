@@ -1,0 +1,32 @@
+diff --git a/lib/client.js b/lib/client.js
+index c5252c1..8e8ee0e 100644
+--- a/lib/client.js
++++ b/lib/client.js
+@@ -1655,6 +1655,8 @@ window.__ModuleLoader__.load({
+ 			*/
+ 			const curatedFields = (family) => {
+ 				const ownsIdentity = family === "pi-ai" && props.declared === true;
++				const baseURLOverridden = schema.hasPath(draft, ["baseURL"]);
++				const canCustomizeApi = ownsIdentity || baseURLOverridden;
+ 				const customModels = schema.getPath(draft, ["models"]);
+ 				const modelsOverridden = schema.hasPath(draft, ["models"]);
+ 				const models = modelDrafts(modelsOverridden ? customModels : inheritedModels());
+@@ -1758,7 +1760,7 @@ window.__ModuleLoader__.load({
+ 									}) : null
+ 								]
+ 							}),
+-							ownsIdentity ? (0, react_jsx_runtime.jsxs)("div", {
++							canCustomizeApi ? (0, react_jsx_runtime.jsxs)("div", {
+ 								className: ModelsSection_module_css_default["field"],
+ 								children: [(0, react_jsx_runtime.jsx)("span", {
+ 									className: ModelsSection_module_css_default["fieldLabel"],
+@@ -4073,7 +4075,8 @@
+ 					}
+ 				}
+ 			}, ModelsSection));
+-			if (!("dshDesktop" in globalThis)) ctx.slots.inject("settings.onboarding", () => ctx.slots.register({
++			// ACRYL is not a DeepSeek product: it shows no DeepSeek preview notice.
++			if (false) ctx.slots.inject("settings.onboarding", () => ctx.slots.register({
+ 				name: "settings.onboarding",
+ 				id: "welcome-notice",
+ 				order: -100,

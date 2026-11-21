@@ -9,7 +9,6 @@ import { runAcrylTui } from '../tui-app/session.ts'
 import { ACRYL_VERSION } from '../version.ts'
 import { runDoctor, runRepair, type Confirm } from '../host/rescue-command.ts'
 import { runUiCommand } from '../host/ui-command.ts'
-import { runNewApp } from '../host/new-command.ts'
 import { describeConnect, describeSave, runRemoteConnect, runSave } from '../host/save-command.ts'
 import { runControlCommand } from '../host/control-command.ts'
 import { parseAcrylArgs, type AcrylPluginInvocation, type AcrylUiInvocation } from './grammar.ts'
@@ -254,9 +253,8 @@ export async function runAcryl(
   }
 
   if (invocation.kind === 'new') {
-    const created = runNewApp(invocation)
-    if (invocation.json) dependencies.write(JSON.stringify(created))
-    else dependencies.write([`Created ${created.title} in ${created.root} (from ${created.blueprint}${created.git === 'initialized' ? ', git repository initialized' : ''}).`, '', 'Start it:', `  ${created.root}/bin/acryl web      (or desktop, cli)`, '', 'Then tell the agent inside what to build.'].join('\n'))
+    // Making an app is the selector's: `acryl new` and `acryl make` there run create-acrylblends, which this terminal agent no longer carries.
+    dependencies.write('acryl new moved: run `npx acryl@latest new <name> [starter]` (or `npx acryl@latest make <name> --from <id>`), and `npx acryl@latest share` to publish an app.')
     return
   }
 

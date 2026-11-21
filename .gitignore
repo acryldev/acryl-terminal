@@ -1,0 +1,7 @@
+node_modules/
+lib/
+release-artifacts/
+npm-packages/
+*.tsbuildinfo
+.DS_Store
+.metadata_never_index

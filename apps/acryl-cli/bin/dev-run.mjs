@@ -19,17 +19,13 @@ import { existsSync, readdirSync, statSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { withBuildLock } from '../../../scripts/lib/build-lock.mjs'
-import { checkoutIsolation } from '../../../scripts/lib/checkout-isolation.mjs'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const packageRoot = resolve(here, '..')
 const root = resolve(packageRoot, '..', '..')
 const bin = resolve(packageRoot, 'lib/bin.js')
-const watchedSourceDirs = [
-  resolve(packageRoot, 'src'),
-  resolve(root, 'runtime/control/src'),
-  resolve(root, 'runtime/harness-runtime/src'),
-]
+// The building blocks (@acryldev/*) come from npm; only this package's own source decides a rebuild.
+const watchedSourceDirs = [resolve(packageRoot, 'src')]
 
 function newestSourceMtime(dir) {
   let newest = 0
@@ -69,8 +65,6 @@ await withBuildLock(root, 'acryl launcher', () => {
   }
 })
 
-// A worktree checkout never touches the main checkout's home (see checkout-isolation.mjs).
-Object.assign(process.env, checkoutIsolation(root))
 const result = spawnSync(process.execPath, [bin, ...process.argv.slice(2)], {
   cwd: root,
   stdio: 'inherit',

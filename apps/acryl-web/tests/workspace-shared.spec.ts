@@ -18,10 +18,13 @@ const execFileAsync = promisify(execFile)
 const require = createRequire(import.meta.url)
 const temporaryHomes: string[] = []
 const initialAcrylHome = process.env.ACRYL_HOME
+const initialShell = process.env.SHELL
 
 afterEach(async () => {
   if (initialAcrylHome === undefined) delete process.env.ACRYL_HOME
   else process.env.ACRYL_HOME = initialAcrylHome
+  if (initialShell === undefined) delete process.env.SHELL
+  else process.env.SHELL = initialShell
   await Promise.all(temporaryHomes.splice(0).map(home => rm(home, { force: true, recursive: true })))
 })
 
@@ -30,6 +33,8 @@ describe('the ACRYL workspace on the Web surface', () => {
     const home = await realpath(await mkdtemp(join(tmpdir(), 'acryl-web-workspace-')))
     temporaryHomes.push(home)
     process.env.ACRYL_HOME = home
+    // The terminal starts the login shell; a machine whose shell is zsh answers a fresh home with its first-run wizard instead of a prompt.
+    if (process.platform !== 'win32') process.env.SHELL = '/bin/sh'
     const repo = join(home, 'repo')
     execFileSync('git', ['init', '-q', repo])
     await writeFile(join(repo, 'a.txt'), 'hello\n')

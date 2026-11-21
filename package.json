@@ -1,0 +1,27 @@
+{
+  "name": "acryl-terminal",
+  "version": "0.3.0",
+  "private": true,
+  "description": "ACRYL terminal coding agent (acryl-cli) and the earlier ACRYL browser surface (acryl-web), built on the published @acryldev building blocks",
+  "license": "MIT",
+  "packageManager": "pnpm@12.14.0",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.14.0",
+      "onFail": "warn"
+    }
+  },
+  "scripts": {
+    "build": "pnpm -r --if-present --workspace-concurrency=1 run build",
+    "typecheck": "pnpm -r --if-present run typecheck",
+    "test": "pnpm -r --if-present run test",
+    "test:scripts": "node --test \"scripts/*.test.mjs\"",
+    "check": "pnpm run build && pnpm run typecheck && pnpm run test && pnpm run test:scripts",
+    "tui": "node apps/acryl-cli/bin/dev-run.mjs",
+    "web": "node apps/acryl-web/bin/dev-run.mjs"
+  }
+}

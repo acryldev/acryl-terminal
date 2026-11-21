@@ -107,12 +107,13 @@ describe('MarketOverlay install failure reporting', () => {
     const fakeTui = { requestRender: () => {}, terminal: { rows: 24, cols: 80 } }
     const overlay = new MarketOverlay(fakeTui as never, fakeCtx as never, () => {}, () => {})
 
-    await new Promise(resolve => setTimeout(resolve, 20)) // let load() resolve
+    // Wait for the states, not for a fixed time: a loaded machine (a parallel test run) is slower than any fixed delay.
+    await vi.waitFor(() => { expect(overlay.render(80).join('\n')).toContain('Some Plugin') }) // load() resolved
     overlay.handleInput('\r') // enter installs the only (selected) item
-    await new Promise(resolve => setTimeout(resolve, 20)) // let install() resolve
-
-    const rendered = overlay.render(80).join('\n')
-    expect(rendered).toContain('pnpm add exited with code 1')
-    expect(rendered).toContain('ERR_PNPM_UNEXPECTED_STORE')
+    await vi.waitFor(() => {
+      const rendered = overlay.render(80).join('\n')
+      expect(rendered).toContain('pnpm add exited with code 1')
+      expect(rendered).toContain('ERR_PNPM_UNEXPECTED_STORE')
+    })
   })
 })
