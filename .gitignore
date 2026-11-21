@@ -1,5 +1,6 @@
 node_modules/
-lib/
+/apps/*/lib/
+/packages/*/lib/
 release-artifacts/
 npm-packages/
 *.tsbuildinfo
