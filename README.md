@@ -29,6 +29,10 @@ corepack pnpm run tui        # build and start the terminal agent from source
 corepack pnpm run web        # build and start the browser surface from source
 ```
 
+## Booting an app to test it: live-run
+
+Never start an app on a real home to test a guard. `node scripts/live-run.mjs web|tui` runs the built surface in a throwaway root with its own `HOME`, ACRYL and engine homes (`ACRYL_REQUIRE_ISOLATED_HOME` makes the runtime refuse a real one), takes the real homes' snapshot first, and on stop checks that the port is free and that nothing in a real home changed. Build first (`node scripts/with-build-lock.mjs corepack pnpm run build`); it never builds. `node scripts/live-run.mjs stop` ends a run from anywhere. This is the tool the monorepo's own rule points at (acryldev/acryl, AGENTS.md).
+
 ## Release
 
 A tag `v<version>` (equal to the version in the root and both apps' `package.json`) runs `.github/workflows/release.yml`:
